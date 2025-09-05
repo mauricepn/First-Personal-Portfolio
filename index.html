@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maurice's Portfolio site</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+      rel="stylesheet" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+      background: linear-gradient(to right, rgb(31, 31, 98), rgb(74, 9, 74));
+    }
+
+    .navbar ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style-type: none;
+    }
+    .navbar ul li {
+      list-style: none;
+    }
+    .navbar ul li a {
+      font-size: 18px;
+      font-family: "Inter", sans-serif;
+      font-weight: bold;
+      color: whitesmoke;
+      text-decoration: none;
+    }
+    .navbar .logo {
+      font-size: 30px;
+      font-family: "Playwrite AU QLD", cursive;
+      font-weight: bolder;
+      color: white;
+      cursor: pointer;
+    }
+    .hero {
+      padding: 0 160px;
+      background-color: rgb(184, 242, 251);
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 45vw;
+      border-radius: 10px;
+    }
+    .hero-img {
+      border-radius: 100%;
+    }
+    .dev {
+      font-size: 40px;
+      font-family: "Playwrite AU QLD", cursive;
+      margin-top: 30px;
+    }
+    .cool-name {
+      color: rgb(31, 31, 98);
+      font-weight: bold;
+      font-size: 60px;
+      font-family: "Inter", sans-serif;
+      margin-top: 30px;
+    }
+    .hero-btns {
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+    }
+    button {
+      padding: 12px 15px;
+      font-size: 18px;
+      font-weight: bold;
+      background-image: linear-gradient(
+        to right,
+        rgb(31, 31, 98),
+        rgb(74, 9, 74)
+      );
+      color: whitesmoke;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    .projects {
+      margin-top: 0;
+      background: linear-gradient(
+        to right,
+        rgb(168, 211, 253),
+        rgb(253, 217, 253)
+      );
+      padding: 0 160px;
+      border-top: 4px solid rgb(188, 188, 251);
+    }
+    .project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      padding: 100px 0;
+    }
+    .text {
+      font-size: 35px;
+      font-family: inter;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      font-family: inter;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .row-reverse {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      padding: 100px 0;
+      flex-direction: row-reverse;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: rgb(56, 14, 80);
+      color: whitesmoke;
+    }
+    button:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar ul li a:hover {
+      color: rgb(177, 167, 72);
+      transition: all 0.1s ease-in-out;
+    }
+    .logo:hover {
+      color: rgb(177, 167, 72);
+      transition: all 0.1s ease-in-out;
+    }
+
+    @media screen and (max-width: 950px) {
+      nav {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hero {
+        padding: 0;
+        flex-direction: column-reverse;
+        height: 90vw;
+      }
+      .hero-left {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .dev {
+        margin-top: 20px;
+      }
+
+      .hero-btns {
+        justify-content: center;
+        margin-top: 30px;
+      }
+      .projects {
+        padding: 20px 10px;
+      }
+      .project {
+        padding: 40px;
+      }
+      .hero-right img {
+        width: 40vw;
+      }
+    }
+    @media screen and (max-width: 607px) {
+      .projects {
+        padding: 20 20px;
+      }
+      .project {
+        flex-direction: column;
+
+        padding: 20px 20px;
+      }
+      .project-info {
+        text-align: center;
+      }
+      .dev {
+        font-size: 35px;
+        margin: 0;
+      }
+      .text {
+        font-size: 25px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .cool-name {
+        font-size: 45px;
+      }
+
+      .hero {
+        padding: 0px;
+        height: 75vh;
+      }
+      button {
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 10px;
+      }
+      footer {
+        font-size: 14px;
+      }
+      .hero-right img {
+        width: 40vw;
+      }
+    }
+    @media screen and (max-width: 430px) {
+      .projects {
+        padding: 0 20px;
+      }
+      .project {
+        padding: 25px 0;
+      }
+      .dev {
+        font-size: 25px;
+      }
+      .cool-name {
+        font-size: 35px;
+      }
+
+      .hero {
+        padding: 0px;
+        height: 75vh;
+      }
+      button {
+        padding: 10px 12px;
+        font-size: 12px;
+        border-radius: 10px;
+      }
+      footer {
+        font-size: 14px;
+      }
+      .hero-right img {
+        width: 70vw;
+      }
+    }
+    @media screen and (max-width: 344px) {
+      .navbar ul li a {
+        font-size: 14px;
+      }
+      .navbar .logo {
+        font-size: 25px;
+      }
+
+      .dev {
+        font-size: 20px;
+      }
+      .cool-name {
+        font-size: 25px;
+      }
+
+      .hero {
+        padding: 0px;
+        height: 75vh;
+      }
+      button {
+        padding: 8px 10px;
+        font-size: 12px;
+        border-radius: 10px;
+      }
+      footer {
+        font-size: 14px;
+      }
+      .hero-right img {
+        width: 70vw;
+      }
+    }
+    @media screen and (max-width: 270px) {
+      .navbar ul li a {
+        font-size: 10px;
+      }
+      .navbar .logo {
+        font-size: 25px;
+      }
+
+      .dev {
+        font-size: 20px;
+      }
+      .cool-name {
+        font-size: 25px;
+      }
+
+      .hero {
+        padding: 0px;
+        height: 75vh;
+      }
+      button {
+        padding: 8px 10px;
+        font-size: 12px;
+        border-radius: 10px;
+      }
+      footer {
+        font-size: 14px;
+      }
+      .hero-right img {
+        width: 70vw;
+      }
+    }
+    @media screen and (max-width: 213px) {
+      .navbar ul {
+        gap: 5px;
+      }
+      .navbar ul li a {
+        font-size: 10px;
+      }
+      .navbar .logo {
+        font-size: 25px;
+      }
+
+      .dev {
+        font-size: 20px;
+      }
+      .cool-name {
+        font-size: 25px;
+      }
+
+      .hero {
+        padding: 0px;
+        height: 75vh;
+      }
+      button {
+        padding: 6px 10px;
+        font-size: 8px;
+        border-radius: 10px;
+      }
+      footer {
+        font-size: 8px;
+      }
+      .hero-right img {
+        width: 70vw;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="logo">MPcods</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="dev">Welcome to my World</div>
+        <div class="dev">I am a <span class="cool-name">Devoloper</span></div>
+        <div class="hero-btns">
+          <button>Contact Me</button>
+          <button>Services</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img
+          class="hero-img"
+          src="./Images/dev 2.png"
+          alt="developer picture" />
+      </div>
+    </section>
+    <section class="projects">
+      <div class="project">
+        <div class="project-image">
+          <img src="./Images/dev.jpg" alt="" />
+        </div>
+        <div class="project-info">
+          <div class="text">Do tasks efficiently with this toool.</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Consectetur,
+            beatae fugiat! Inventore tempore delectus .
+          </p>
+          <div class="buttons">
+            <button class="btns">Lean More</button>
+          </div>
+        </div>
+      </div>
+      <div class="project row-reverse">
+        <div class="project-image">
+          <img src="./Images/dev.jpg" alt="" />
+        </div>
+        <div class="project-info">
+          <div class="text">Do tasks efficiently with this toool.</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Consectetur,
+            beatae fugiat! Inventore tempore delectus .
+          </p>
+          <div class="buttons">
+            <button class="btns">Lean More</button>
+          </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-image">
+          <img src="./Images/dev.jpg" alt="" />
+        </div>
+        <div class="project-info">
+          <div class="text">Do tasks efficiently with this toool.</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Consectetur,
+            beatae fugiat! Inventore tempore delectus .
+          </p>
+          <div class="buttons">
+            <button class="btns">Lean More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">Copyright 2025 | All rights reserved</div>
+    </footer>
+  </body>
+</html>
